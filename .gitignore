@@ -1,0 +1,14 @@
+# ビルド結果
+obj/
+bin/
+.build/
+*.exe
+*.mdb
+*.out
+*.dSYM/
+
+# macOS
+.DS_Store
+
+# 問題文（著作権のため登録しない）
+problems/**/[Qq]uestion.md
