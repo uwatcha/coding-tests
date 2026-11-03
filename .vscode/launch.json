@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug current C# file with Mono",
+            "type": "mono",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "cwd": "${fileDirname}",
+            "preLaunchTask": "Compile current C# file with Mono debug symbols",
+            "console": "integratedTerminal"
+        },
+        {
+            // CodeLLDB 拡張 (vadimcn.vscode-lldb) が必要
+            "name": "Debug current C++ file with LLDB",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/.build/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+            "cwd": "${fileDirname}",
+            "preLaunchTask": "Compile current C++ file with debug symbols",
+            "console": "integratedTerminal"
+        }
+    ]
+}
